@@ -1,29 +1,43 @@
-# ele-admin-template
+# 河豚换电电池资产管理平台
 
-## Project setup
+## 下载、运行及生产
 
-```
-npm install
-```
+- 1. 安装依赖 `yarn` / `npm i`
+- 2. 运行 `yarn dev` / `npm run dev`
+- 3. 运行端口 默认为`8080`，为了防止与其他项目冲突，改成了`8810`
+- 4. 生产环境打包 `yarn build` / `npm run build`
 
-### Compiles and hot-reloads for development
+### 分支管理
 
-```
-npm run serve
-```
+- `main`分支是主要的生产环境分支，用于部署稳定的版本。
+- `develop`分支是开发环境分支，用于集成各个功能分支的最新代码。
+- 每个功能或修复都应该在自己的分支上进行开发，开发完毕后再合并到`develop`分支。
+- 请确保在合并代码之前进行适当的测试和代码审查。
 
-### Compiles and minifies for production
 
-```
-npm run build
-```
+### 代码提交描述
 
-### Lints and fixes files
+在提交代码时，请尽量提供有意义的提交描述，以便更好地追踪和理解代码变更。提交描述应该简洁明了，准确描述本次提交所做的更改，并遵循以下要求:
 
-```
-npm run lint
-```
+- 规则
+- <commit类型>:<space><commit message>
+- 示例
+- git commit -m "feat: 新增了xx模块下的xx功能"
 
-### Customize configuration
+- `feat`: 新功能的添加或修改。
+- `fix`: 修复Bug或错误。
+- `build`: 生产工具的修改。
+- `docs`: 文档相关的修改，如README、文档注释等。
+- `style`: 代码样式的修改，如代码格式化、空格、缩进等。
+- `refactor`: 代码重构和优化，不涉及新功能和Bug修复。
+- `test`: 测试相关的修改，如添加测试用例、调整测试配置等。
+- `chore`: 构建过程或辅助工具的修改，如配置文件、脚本等。
+- `perf`: 性能优化相关的修改。
+- `ci`: 持续集成新增。
+- `merge`: 合并分支的提交。
+- `revert`: 撤销之前的提交。
+- `anno`: 增加注释。
+- `release`: 版本发布相关的提交。
 
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 前端代码书写规范
+- [请点击 =>](https://www.notion.so/be049c4dc83145108fdee6bc026a49cd)
