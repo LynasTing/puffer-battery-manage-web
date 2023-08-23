@@ -61,5 +61,4 @@ export const I18N_ENABLE = true;
 export const MAP_KEY = '006d995d433058322319fa797f2876f5';
 
 // EleAdmin 授权码, 自带的只能用于演示, 正式项目请更换为自己的授权码
-export const LICENSE_CODE =
-  'dk9mcwJyetRWQlxWRiojIqJWdzJCLi4WazgDNxojI0NWZyIiOiQWaiwSOsISSqNFV61GWi42bpNnclZnI0nIxEjLxIiO0NW=';
+export const LICENSE_CODE = 'dk9mcwJyetRWQlxWRiojIqJWdzJCLi4WazgDNxojI0NWZyIiOiQWaiwSOsISSqNFV61GWi42bpNnclZnI0nIxEjLxIiO0NW=';

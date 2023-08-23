@@ -1,6 +1,6 @@
 {
-  "name": "ele-admin-template",
-  "version": "1.11.3",
+  "name": "puffer-battery-manage-web",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "set PORT=8810 && vue-cli-service serve --open",
