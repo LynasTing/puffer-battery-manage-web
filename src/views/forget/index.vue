@@ -80,7 +80,7 @@
       </div>
     </el-form>
     <div class="login-copyright">
-      copyright © 2022 eleadmin.com all rights reserved.
+      copyright © 2022 福建省小海豚新能源科技有限公司
     </div>
     <!-- 图形验证码弹窗 -->
     <ele-modal width="320px" title="发送验证码" :visible.sync="showImgCode">
@@ -108,17 +108,6 @@
         立即发送
       </el-button>
     </ele-modal>
-    <!-- 实际项目去掉这段 -->
-    <div
-      class="hidden-xs-only"
-      style="position: absolute; right: 30px; bottom: 20px; z-index: 9"
-    >
-      <el-radio-group v-model="direction" size="mini">
-        <el-radio-button label="2">居左</el-radio-button>
-        <el-radio-button label="0">居中</el-radio-button>
-        <el-radio-button label="1">居右</el-radio-button>
-      </el-radio-group>
-    </div>
   </div>
 </template>
 

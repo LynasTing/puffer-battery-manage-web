@@ -7,10 +7,7 @@ export default {
     logout: '退出登录'
   },
   footer: {
-    website: '官网',
-    document: '文档',
-    authorization: '授权',
-    copyright: 'Copyright © 2022 武汉易云智科技有限公司'
+    copyright: 'Copyright © 2023 福建省小海豚新能源科技有限公司'
   },
   logout: {
     title: '提示',

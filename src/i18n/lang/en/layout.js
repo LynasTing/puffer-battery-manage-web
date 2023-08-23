@@ -10,7 +10,7 @@ export default {
     website: 'Website',
     document: 'Document',
     authorization: 'Authorization',
-    copyright: 'Copyright © 2022 Wuhan EClouds Technology Co., Ltd'
+    copyright: 'Copyright © 2023 福建省小海豚新能源科技有限公司'
   },
   logout: {
     title: 'Confirm',
