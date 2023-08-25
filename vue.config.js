@@ -4,11 +4,11 @@ const { transformElementScss } = require('ele-admin/lib/utils/dynamic-theme');
 module.exports = {
   devServer: {
     proxy: {
-      '/api': {
-        target: 'http://fz.hthuandian.cn/api',
+      '/batteryManage': {
+        target: 'http://fz.hthuandian.cn/batteryManage',
         changeOrigin: true,
         pathRewrite: {
-          '^/api': '' 
+          '^/batteryManage': '' 
         }
       }
     }
