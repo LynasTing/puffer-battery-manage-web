@@ -10,9 +10,9 @@
       <i v-else class="el-icon-_screen-full"></i>
     </div>
     <!-- 语言切换 -->
-    <div class="ele-admin-header-tool-item">
+    <!-- <div class="ele-admin-header-tool-item">
       <i18n-icon />
-    </div>
+    </div> -->
     <!-- 消息通知 -->
     <div class="ele-admin-header-tool-item">
       <header-notice />
@@ -21,7 +21,8 @@
     <div class="ele-admin-header-tool-item">
       <el-dropdown @command="onUserDropClick">
         <div class="ele-admin-header-avatar">
-          <el-avatar :src="loginUser.avatar" />
+          <!-- <el-avatar :src="loginUser.avatar" /> -->
+          <img src="@/assets/imgs/default_cloud.jpg" class="el-avatar rounded-half" />
           <span class="hidden-xs-only">{{ loginUser.nickname }}</span>
           <i class="el-icon-arrow-down"></i>
         </div>
@@ -45,9 +46,9 @@
       </el-dropdown>
     </div>
     <!-- 主题设置 -->
-    <div class="ele-admin-header-tool-item" @click="openSetting">
+    <!-- <div class="ele-admin-header-tool-item" @click="openSetting">
       <i class="el-icon-_more"></i>
-    </div>
+    </div> -->
     <!-- 修改密码弹窗 -->
     <password-modal :visible.sync="passwordVisible" />
     <!-- 主题设置抽屉 -->

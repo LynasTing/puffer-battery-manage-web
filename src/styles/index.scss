@@ -50,7 +50,6 @@ $--ele-font-path: '~ele-admin/es/style/fonts';
 .opacity-1 {
   opacity: 1;
 }
-
 .mx-20 {
   margin: 0 20px;
 }
@@ -68,6 +67,9 @@ $--ele-font-path: '~ele-admin/es/style/fonts';
 }
 .py-20 {
   padding: 20px 0;
+}
+.rounded-half {
+  border-radius: 50%;
 }
 .can-del-img .el-icon-close {
   top: -12px;
