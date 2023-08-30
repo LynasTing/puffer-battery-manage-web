@@ -62,3 +62,28 @@ export const encryptionUpload = async (file, name, path) => {
       })
   })
 }
+
+/**
+ * 导出文件
+ */
+export const exportFileToExcel = (url, data = {}) => {
+  if(Object.getOwnPropertyNames(data).length) {
+    Object.keys(data).forEach((key, index) => {
+      url += key + '=' + data[key]
+      if(index !== Object.keys(data).length -1) url += '&'
+    })
+  }
+  location.href = process.env.VUE_APP_API_BASE_URL + url
+  Message.success('导出成功')
+}
+
+/**
+ * 浅拷贝
+ */
+export function shallowCopy(a, b) {
+  console.log(`a + ::>>`, a)
+  console.log(`b + ::>>`, b)
+  for (const key in b) {
+    if (a.hasOwnProperty(key)) a[key] = b[key]
+  }
+}
