@@ -13,6 +13,15 @@ const service = axios.create({
 });
 
 /**
+ * 后端接口返回数据的含义
+ * @params rs 为true 代表接口调用成功
+ * @params code number类型的0代表接口调用成功
+ * @params data 表示返回的数据类型是Object，里面会有一个或多个键值对
+ * @params datas 表示返回的数据类型是纯数组
+ * @params msg 接口操作提示
+ */
+
+/**
  * 添加请求拦截器
  */
 service.interceptors.request.use(
