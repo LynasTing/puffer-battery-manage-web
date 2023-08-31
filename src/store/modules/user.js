@@ -46,12 +46,10 @@ export default {
       }
       // 用户信息
       commit('setUserInfo', result);
+      
       // 用户权限
-      const authorities =
-        result.authorities
-          ?.filter((d) => !!d.authority)
-          ?.map((d) => d.authority) ?? [];
-      commit('setAuthorities', authorities);
+      const authorities = result?.filter((d) => !!d.authority)?.map((d) => d.authority) ?? [];
+      // commit('setAuthorities', authorities);
       // 用户角色
       const roles = result.roles?.map((d) => d.roleCode) ?? [];
       commit('setRoles', roles);
@@ -59,7 +57,7 @@ export default {
       const { menus, homePath } = formatMenus(
         USER_MENUS ??
           toTreeData({
-            data: result.authorities?.filter((d) => d.menuType !== 1),
+            data: result?.filter((d) => d.menuType !== 1),
             idField: 'menuId',
             parentIdField: 'parentId'
           })
