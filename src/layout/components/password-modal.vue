@@ -106,7 +106,7 @@
         this.$refs.form.validate((valid) => {
           if (valid) {
             this.loading = true;
-            updatePassword(this.form)
+            updatePassword({ oldPassword: this.form.oldPassword, newPassword: this.form.password })
               .then((msg) => {
                 this.loading = false;
                 this.$message.success(msg);

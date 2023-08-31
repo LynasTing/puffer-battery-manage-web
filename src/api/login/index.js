@@ -5,22 +5,12 @@ import { setToken } from '@/utils/token-util';
  * 登录
  */
 export async function login(data) {
-  data.tenantId = 1; // 租户id
+  // data.tenantId = 1; // 租户id
   const res = await request.post('/login', data);
   if (res.data.code === 0) {
-    setToken(res.data.data.access_token, data.remember);
-    return res.data.message;
+    setToken(res.data.data.token, false); 
+    return res.data.msg;
   }
-  return Promise.reject(new Error(res.data.message));
+  return Promise.reject(new Error(res.data.msg));
 }
 
-/**
- * 获取验证码
- */
-export async function getCaptcha() {
-  const res = await request.get('/captcha');
-  if (res.data.code === 0) {
-    return res.data.data;
-  }
-  return Promise.reject(new Error(res.data.message));
-}

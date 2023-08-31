@@ -1,12 +1,12 @@
 import request from '@/utils/request';
 
 /**
- * 获取当前登录的用户信息、菜单、权限、角色
+ * 登录账户菜单
  */
 export async function getUserInfo() {
-  const res = await request.get('/auth/user');
-  if (res.data.code === 0 && res.data.data) {
-    return res.data.data;
+  const res = await request.post('admin/menu/userMenu')
+  if(res.data.code === 0 && res.data.datas.length) {
+    return res.data.datas;
   }
   return Promise.reject(new Error(res.data.message));
 }
@@ -15,7 +15,7 @@ export async function getUserInfo() {
  * 修改当前登录的用户密码
  */
 export async function updatePassword(data) {
-  const res = await request.put('/auth/password', data);
+  const res = await request.put('/passwdChange', data);
   if (res.data.code === 0) {
     return res.data.message ?? '修改成功';
   }

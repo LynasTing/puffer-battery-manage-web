@@ -10,7 +10,7 @@ export default {
     website: '官網',
     document: '檔案',
     authorization: '授權',
-    copyright: 'Copyright © 2022 武漢易雲智科技有限公司'
+    copyright: 'Copyright © 2023 福建省小海豚新能源科技有限公司'
   },
   logout: {
     title: '詢問',

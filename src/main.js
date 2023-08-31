@@ -8,6 +8,7 @@ import EleAdmin from 'ele-admin';
 import VueClipboard from 'vue-clipboard2';
 import i18n from './i18n';
 import './styles/index.scss';
+import FileUpload from '@/components/FileUpload/index.vue'
 
 Vue.config.productionTip = false;
 
@@ -21,6 +22,7 @@ Vue.use(EleAdmin, {
 });
 Vue.use(permission);
 Vue.use(VueClipboard);
+Vue.component('FileUpload', FileUpload)
 
 new Vue({
   router,

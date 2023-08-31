@@ -3,3 +3,103 @@ $--ele-font-path: '~ele-admin/es/style/fonts';
 @import '~ele-admin/es/style/themes/dynamic.scss';
 @import '~ele-admin/es/style/index.scss';
 @import './transition/index.scss';
+
+/** 自定义样式 */
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.top-0 {
+  top: 0;
+}
+.left-0 {
+  left: 0;
+}
+.w-full {
+  width: 100%;
+}
+.h-full {
+  height: 100%;
+}
+.flex {
+  display: flex;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between
+}
+.justify-around {
+  justify-content: space-around
+}
+.items-center {
+  align-items: center;
+}
+.overflow-h {
+  overflow: hidden;
+}
+.cursor-point {
+  cursor: pointer;
+}
+.opacity-0 {
+  opacity: 0;
+}
+.opacity-1 {
+  opacity: 1;
+}
+.mx-20 {
+  margin: 0 20px;
+}
+.my-20 {
+  margin: 20px 0;
+}
+.mr-20 {
+  margin-right: 20px;
+}
+.mb-5 {
+  margin-bottom: 5px;
+}
+.px-20 {
+  padding: 0 20px;
+}
+.py-20 {
+  padding: 20px 0;
+}
+.rounded-half {
+  border-radius: 50%;
+}
+.can-del-img .el-icon-close {
+  top: -12px;
+  right: 48px;
+  font-size: 24px;
+  color: white;
+  background: rgba(0, 0, 0, .8);
+  border-radius: 50%;
+}
+/** element-ui 适配样式 */
+.avatar-uploader .el-upload {
+  border: 1px dashed #d9d9d9;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.avatar-uploader .el-upload:hover {
+  border-color: #409EFF;
+}
+.avatar-uploader-icon {
+  font-size: 28px;
+  color: #8c939d;
+  width: 148px;
+  height: 148px;
+  line-height: 148px;
+  text-align: center;
+}
+.avatar {
+  width: 148px;
+  height: 148px;
+  display: block;
+}

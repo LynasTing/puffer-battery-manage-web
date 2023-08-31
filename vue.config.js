@@ -2,6 +2,17 @@ const CompressionWebpackPlugin = require('compression-webpack-plugin');
 const { transformElementScss } = require('ele-admin/lib/utils/dynamic-theme');
 
 module.exports = {
+  devServer: {
+    proxy: {
+      '/batteryManage': {
+        target: 'http://fz.hthuandian.cn/batteryManage',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/batteryManage': '' 
+        }
+      }
+    }
+  },
   productionSourceMap: false,
   transpileDependencies: ['element-ui', 'ele-admin', 'vue-i18n'],
   configureWebpack: {
