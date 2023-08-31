@@ -15,8 +15,8 @@
     <el-form-item label="联系人:" prop="name">
       <el-input v-model="form.name" placeholder="请输入联系人" :maxlength="20" clearable />
     </el-form-item>
-    <el-form-item label="联系人:" prop="phone">
-      <el-input v-model.trim="form.phone" placeholder="请输入联系人" :maxlength="11" clearable />
+    <el-form-item label="电话号码:" prop="phone">
+      <el-input v-model.trim="form.phone" placeholder="请输入电话号码" :maxlength="11" clearable />
     </el-form-item>
     <el-form-item label="地址:" prop="address">
       <el-input v-model="form.address" placeholder="请输入地址" :maxlength="20" clearable />
