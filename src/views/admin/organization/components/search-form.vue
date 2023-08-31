@@ -30,6 +30,20 @@
             </el-select>
           </el-form-item>
         </el-col>
+        <el-col v-bind="styleResponsive ? { lg: 4, md: 12 } : { span: 8 }">
+          <div class="ele-form-actions ele-text-right">
+            <el-button type="primary" icon="el-icon-search" class="ele-btn-icon" @click="search">查询</el-button>
+            <el-button @click="reset">重置</el-button>
+            <el-link type="primary" :underline="false" @click="toggleExpand">
+              <template v-if="searchExpand">
+                收起<i class="el-icon-arrow-up"></i>
+              </template>
+              <template v-else>
+                展开<i class="el-icon-arrow-down"></i>
+              </template>
+            </el-link>
+          </div>
+        </el-col>
         <el-col v-bind="styleResponsive ? { lg: 5, md: 12 } : { span: 8 }" v-if="searchExpand">
           <el-form-item label="类型:">
             <el-select v-model="where.type" class="ele-block" placeholder="请选择类型" clearable>
@@ -51,20 +65,6 @@
               @change="dateChangePicker"
             />
           </el-form-item>
-        </el-col>
-        <el-col v-bind="styleResponsive ? { lg: 4, md: 12 } : { span: 8 }">
-          <div class="ele-form-actions ele-text-right">
-            <el-button type="primary" icon="el-icon-search" class="ele-btn-icon" @click="search">查询</el-button>
-            <el-button @click="reset">重置</el-button>
-            <el-link type="primary" :underline="false" @click="toggleExpand">
-              <template v-if="searchExpand">
-                收起<i class="el-icon-arrow-up"></i>
-              </template>
-              <template v-else>
-                展开<i class="el-icon-arrow-down"></i>
-              </template>
-            </el-link>
-          </div>
         </el-col>
       </el-row>
     </el-form>
