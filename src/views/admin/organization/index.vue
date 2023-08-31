@@ -18,7 +18,7 @@
         :row-click-checked="false"
         :row-click-checked-intelligent="false"
         :paginationClass="null"
-        :default-sort="{ prop: 'createTime', order: 'ascending' }"
+        :default-sort="{ status: [0, 1] }"
         cache-key="listBasicTable"
       >
         <!-- 表头工具按钮 -->
@@ -38,11 +38,8 @@
             </div>
           </div>
         </template>
-        <template v-slot:name="{ row }">
-          <router-link :to="'/list/basic/details/' + row.userId"> {{ row.name }}</router-link>
-        </template>
         <template v-slot:status="{ row }">
-          <ele-dot :ripple="row.status === 0" :type="[null, 'danger'][row.status]" :text="['正常', '冻结'][row.status]" />
+          <ele-dot :ripple="true" :type="[null, 'danger'][row.status]" :text="['正常', '冻结'][row.status]" />
         </template>
         <template v-slot:action="{ row }">
           <el-link type="primary" :underline="false"  icon="el-icon-edit"  @click.stop="openEdit(row)">修改</el-link>
@@ -170,7 +167,16 @@
         ];
       }
     },
+    watch: {
+      $route(val) {
+        if(val.fullPath === '/admin/organization') this.reload()
+      }
+    },
     methods: {
+      /* 表格数据源 */
+      async datasource({ page, limit, where }) {
+        return await pageOrganization({ page, limit, ...where })
+      },
       /* 启用/禁用  */
       enableDisable(row) {
         enableOrganization({ id: row.id, status: row.status ? 0 : 1 })
@@ -181,10 +187,6 @@
           .catch(err => {
             this.$message.error(err)
           })
-      },
-      /* 表格数据源 */
-      async datasource({ page, limit, where }) {
-        return await pageOrganization({ page, limit, ...where })
       },
       /* 刷新表格 */
       reload(where) {
@@ -229,7 +231,7 @@
       },
       /* 表格搜索 */
       doReload() {
-        this.reload({ ...this.lastWhere });
+        this.reload(this.lastWhere);
       }
     }
   };
