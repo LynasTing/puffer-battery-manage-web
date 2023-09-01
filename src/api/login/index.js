@@ -5,7 +5,6 @@ import { setToken } from '@/utils/token-util';
  * 登录
  */
 export async function login(data) {
-  // data.tenantId = 1; // 租户id
   const res = await request.post('/login', data);
   if (res.data.code === 0) {
     setToken(res.data.data.token, false); 
