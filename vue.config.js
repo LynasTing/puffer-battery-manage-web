@@ -2,6 +2,7 @@ const CompressionWebpackPlugin = require('compression-webpack-plugin');
 const { transformElementScss } = require('ele-admin/lib/utils/dynamic-theme');
 
 module.exports = {
+  publicPath: '',
   devServer: {
     proxy: {
       '/batteryManage': {
