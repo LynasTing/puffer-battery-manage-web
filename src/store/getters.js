@@ -3,5 +3,6 @@
  */
 export default {
   user: (state) => state.user,
-  theme: (state) => state.theme
+  theme: (state) => state.theme,
+  system: (state) => state.system
 };
